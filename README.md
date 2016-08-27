@@ -8,9 +8,11 @@
 * Build Tool: Maven
 
 
-# System Features
-* Management of users through CRUD interface
-* and so on
+# 相关知识点如下
+* 1.通过spring-data 进行CRUD等操作
+* 2.使用swagger2构建RESTful APIs
+* swagger2 访问链接：http://localhost:8090/swagger-ui.html
+
 
 # About
 * [Github link](https://github.com/amazeyope)
