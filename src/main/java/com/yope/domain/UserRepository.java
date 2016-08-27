@@ -3,6 +3,8 @@ package com.yope.domain;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 
@@ -28,17 +30,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     User findById(Long id);
 
     void delete(Long id);
-
-     /*   @Transactional
-    @Modifying
-    @Query("update User u set u.name=:name, u.age =:age where u.id=:id")
-    int setUserInfoById(String name, Integer age, Long id);*/
-
-   /*
-    @Transactional
-    @Modifying
-    @Query("delete from User where id=:id")
-    int deleteUser(Long id);*/
 
 
 }

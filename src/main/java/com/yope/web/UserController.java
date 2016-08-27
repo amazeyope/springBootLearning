@@ -1,9 +1,7 @@
 package com.yope.web;
 
 import com.yope.domain.User;
-
 import java.util.*;
-
 import com.yope.domain.UserRepository;
 import io.swagger.annotations.*;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +17,7 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping(value = "/user")     // 通过这里配置使下面的映射都在/user下，可去除
 public class UserController {
+
     @Resource
     private UserRepository userRepository;
 
@@ -36,7 +35,6 @@ public class UserController {
     public String putUser(@PathVariable("id") Long id, @RequestBody User user) {
         user.setId(id);
         userRepository.save(user);
-       // userRepository.setUserInfoById(user.getName(), user.getAge(), id);
         return "success";
     }
 
